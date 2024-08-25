@@ -12,8 +12,22 @@ for i in range(2):
     randomm = random.choice(rad)
     player_entery = input(" Choose rock(1) papper(2) or sissors(0):")
     entery = int(player_entery)
-    print(f" Computer choice: {randomm}")
-    print(f" Player choice: {entery}\n")
+    if entery == 0:
+        print(f" Player choice: ")
+    elif entery == 1:
+        print(f" Player choice: 🪨\n")
+    elif entery == 2:
+        print(f" Player choice: 📄\n")
+    else:
+        print("😭")
+
+    if randomm == 0:
+        print(f" Computer choice:✂️\n")
+    elif randomm == 1:
+        print(f" Computer choice:🪨\n")
+    elif randomm == 2:
+        print(f" Computer choice:📄\n")
+
     if 0 <= randomm <= 2 and 0 <= entery <= 2:
         if randomm == sissors and entery == papper\
            or randomm == papper and entery == rock \
@@ -30,7 +44,7 @@ for i in range(2):
             print(f"Computer score: {computer_count}\n")
             print("Player wins this round 😎\n")
         else:
-            print("A tie 💪")
+            print("A tie 🤝")
             print(f"player score: {player_count}")
             print(f"computer score: {computer_count}\n")
     else:
@@ -38,8 +52,8 @@ for i in range(2):
 print(f"player Total score: {player_count}")
 print(f"Computer Total score: {computer_count}\n")
 if player_count > computer_count:
-    print("Player wins overall")
+    print("Player wins overall 💪🤣")
 elif player_count < computer_count:
-    print("Computer wins overall")
+    print("Computer wins overall 💪🤖")
 else:
-    print("Tie in both rounds, Play again")
+    print("Tie in both rounds, Play again 🤝")
